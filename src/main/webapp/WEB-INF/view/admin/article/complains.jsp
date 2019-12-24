@@ -100,7 +100,9 @@ function update(id,obj){
 	})
 }
 function goPage(pageNum){
-	var  url="/admin/article/complains?pageNum="+pageNum
+	var orderMethod = '${complainVO.orderMethod}'
+	var orderName = '${complainVO.orderName}'
+	var  url="/admin/article/complains?pageNum="+pageNum+"&"+$("#form1").serialize()+"&orderName="+orderName+"&orderMethod="+orderMethod;
 	$("#center").load(url);	 
 			 
 }
