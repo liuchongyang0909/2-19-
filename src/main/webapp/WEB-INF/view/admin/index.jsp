@@ -31,7 +31,7 @@
 		<hr style="">
 		<div class="row" style="height: 550px">
 		<!-- 左侧：菜单 -->
-			<div class="col-md-3" style="background-color: #ccc">
+			<div class="col-md-3" style="">
 				<div class="">
 				<!-- As a link -->
 					<nav class="navbar navbar-light bg-light">
@@ -65,7 +65,7 @@
 				</div>
 			</div>
 		<!-- 中右侧： 内容区域-->
-			<div class="col-md-9" id="center" style="background-color: yellow"></div>
+			<div class="col-md-9" id="center" style=""></div>
 		</div>
 	</div>
 </body>

@@ -62,13 +62,13 @@ li {
 	<div class="container-fluid">
 		<div class="row" style="height: 35px;background-color: #222222">
 			<a href="#"><font color="white" size="4px">下载APP</font></a>&nbsp;&nbsp;&nbsp;
-			<div style="float: right"><font color="white" size="3px"><a href="/passport/login">登录</a><a href="/passport/reg">注册</a></font></div>
+			<div style="float: right"><font color="white" size="3px"><a href="/passport/login">[登录]|</a><a href="/passport/reg">[注册]</a></font></div>
 		</div>
 	</div>	
 	<div class="container"  style="margin-top: 10px">
 		<div class="row" >
 		<!-- 左侧栏目 -->
-			<div class="col-md-2" style="height: 550px;background-color: red">
+			<div class="col-md-2" style="height: 550px">
 				<img alt="" src="/resource/image/logo-index.png" width="160px" height="60px">
 				<ul class="list-group">
 					<li class="channel-item  ${article.channelId==null?"active":"" }"><a href="/">推荐</a></li>
@@ -77,7 +77,7 @@ li {
 						</c:forEach> 
 				</ul>
 			</div>
-			<div class="col-md-7" style="background-color: #ccc">
+			<div class="col-md-7" style="">
 			<!--轮播图-->
 				<c:if test="${null==article.channelId }">
 					<div>
@@ -149,7 +149,7 @@ li {
 				<jsp:include page="/WEB-INF/view/common/pages.jsp"></jsp:include>
 				</div>
 			</div>
-			<div class="col-md-3" style="background-color: blue">
+			<div class="col-md-3" style="">
 				<div class="card" style="width: 18rem; padding-left: 2px">
 					<div class="card-header">最新文章</div>
 					
