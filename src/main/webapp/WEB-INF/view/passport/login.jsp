@@ -40,7 +40,7 @@
 					<div class="form-group form-inline" >
 						<label for="isRemember">十天内免登录</label>
 						<input  class="form-check-input" type="checkbox" name="isRemember"> 
-					</div>
+					</div> 
 					<div class="form-group">
 						<button class="btn btn-info" type="submit">登录</button>
 						<button class="btn btn-info" type="button" onclick="goReg()">去注册</button>
