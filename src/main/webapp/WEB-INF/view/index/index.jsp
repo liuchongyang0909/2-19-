@@ -79,6 +79,20 @@ li {
 			</div>
 			<div class="col-md-7" style="">
 			<!--轮播图-->
+			
+			
+			<!-- 搜索框 -->
+			<form action="/article/search" method="get">
+				<div class="input-group mb-3">
+	  				<input type="text" name="key" value="${key}" class="form-control" 
+		  				placeholder="请输入搜索的内容！es索引库查询" aria-label="Recipient's username" 
+		  				aria-describedby="button-addon2">
+	  					<div class="input-group-append">
+	    					<button class="btn btn-outline-secondary" 
+	    						id="button-addon2">搜索</button>
+	  					</div>
+				</div>
+			</form>
 				<c:if test="${null==article.channelId }">
 					<div>
 						<div id="carouselExampleCaptions" class="carousel slide"
@@ -180,7 +194,8 @@ li {
 function goPage(pageNum) {
 	var channelId ='${article.channelId}'
 	var categoryId ='${article.categoryId}'
-	location.href="?channelId="+channelId+"&categoryId="+categoryId+"&pageNum=" + pageNum;
+	var key ='${key}'
+	location.href="?channelId="+channelId+"&categoryId="+categoryId+"&pageNum=" + pageNum + "&key=" + key;
 	
 }
 </script>

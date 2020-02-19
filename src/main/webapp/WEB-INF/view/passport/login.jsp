@@ -49,7 +49,7 @@
 					</form>
 					</div>
 			<div class="col-md-8">
-				<img alt="" src="/resource/image/login-bgm.jpg"
+				<img alt="" src="/resource/image/login-bgm.png"
 					style="width: 450px; height: 350px" class="rounded-circle">
 			</div>		
 			</div>

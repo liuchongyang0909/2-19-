@@ -19,7 +19,7 @@
 	<div class="container">
 		<!-- header -->
 		<div class="row" style="height: 80px; margin-top: 10px">
-			<div class="col-md-12" style="background-color: pink">
+			<div class="col-md-12" style="background-color: white;">
 				<img alt="" src="/resource/image/logo.png" height="80px" width="100px" class="rounded-circle">
 					<font class=""><b>个人中心</b> 
 						登录人:${sessionScope.user.username } <a href="/passport/logout">注销</a>
@@ -29,17 +29,17 @@
 		<hr style="">
 		<div class="row" style="height: 550px">
 			<!-- 左侧：菜单 -->
-			<div class="col-md-3" style="background-color: #ccc">
+			<div class="col-md-3" style="background-color: white;">
 				<div class="list-group" style="margin-top: 20px">
 					<a href="#" data="/my/article/articles" class="list-group-item list-group-item-action">我的文章</a>
 					<a href="#" data="/my/article/publish" class="list-group-item list-group-item-action">发布文章</a>
-					<a href="#" class="list-group-item list-group-item-action">我的收藏</a>
+					<a href="#" data="/my/article/shouChang" class="list-group-item list-group-item-action">我的收藏</a>
 					<a href="#" class="list-group-item list-group-item-action">用户设置</a>
 					<a href="#" class="list-group-item list-group-item-action">发布图片</a> 
 				</div>
 			</div>
 			<!-- 中右侧： 内容区域-->
-			<div class="col-md-9" id="center" style="background-color: yellow"></div>
+			<div class="col-md-9" id="center" style="background-color: white;"></div>
 			<!-- 引入kindeditor -->
 			<div style="display: none">
 				<jsp:include page="/resource/kindeditor/jsp/demo.jsp"/>

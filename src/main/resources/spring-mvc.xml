@@ -8,7 +8,7 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 	<!-- 扫描器 -->
 	<context:component-scan
-		base-package="com.peishujuan.cms.controller"></context:component-scan>
+		base-package="com.liuchongyang.cms.controller"></context:component-scan>
 	<!-- 视图解析图 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -26,27 +26,28 @@
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
 
-	<!-- 配置拦截器 -->
-	<mvc:interceptors>
-	<!-- 个人中心拦截 -->
-		<mvc:interceptor>
-			<!-- 拦截规则 -->
-			<mvc:mapping path="/my/**"/>
-			<!-- 不拦截规则 -->
-			<mvc:exclude-mapping path="/resource/**"/>
-			<!-- 拦截器处理类 -->
-			<bean class="com.peishujuan.cms.util.UserInterceptor"></bean>
-		</mvc:interceptor>
-		
-	<!-- 管理员拦截 -->
-		<mvc:interceptor>
-			<!-- 拦截规则 -->
-			<mvc:mapping path="/admin/**"/>
-			<!-- 不拦截规则 -->
-			<mvc:exclude-mapping path="/resource/**"/>
-			<!-- 拦截器处理类 -->
-			<bean class="com.peishujuan.cms.util.AdminInterceptor"></bean>
-		</mvc:interceptor>
-	</mvc:interceptors>
-</beans>
+<!-- 配置拦截器 -->
+<mvc:interceptors>
+  <!-- 个人中心拦截器 -->
+ <mvc:interceptor>
+   <!-- 拦截规则 -->
+    <mvc:mapping path="/my/**"/>
+    <!-- 不拦截规则 -->
+    <mvc:exclude-mapping path="/resource/**"/>
+    <!-- 拦截器处理类 -->
+    <bean class="com.liuchongyang.cms.util.UserInterceptor"></bean>
+ </mvc:interceptor>
 
+
+ <!-- 管理员中心拦截器 -->
+ <mvc:interceptor>
+   <!-- 拦截规则 -->
+    <mvc:mapping path="/admin/**"/>
+    <!-- 不拦截规则 -->
+    <mvc:exclude-mapping path="/resource/**"/>
+    <!-- 拦截器处理类 -->
+    <bean class="com.liuchongyang.cms.util.AdminInterceptor"></bean>
+ </mvc:interceptor>
+
+</mvc:interceptors>
+</beans>

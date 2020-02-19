@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuchongyang.cms.dao.ShouChangMapper">
+	<select id="getShouChangList" resultType="shouchang">
+		select * from shouchang
+	</select>
+	
+	<delete id="delShouChang">
+		delete from shouchang where id = ${id}
+	</delete>
+	
+	<select id="getArticle" resultType="article">
+		select title,summary from cms_article where id = ${id}
+	</select>
+	
+	<insert id="saveShouChang">
+		insert into shouchang set texts = #{title}, url = "http://localhost/my/article/shouchang", user_id = ${id}, created = now()
+	</insert>
+</mapper>

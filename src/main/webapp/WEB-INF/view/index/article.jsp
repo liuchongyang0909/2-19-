@@ -17,9 +17,14 @@
 	<div class="container">
 		<h1 align="center">${a.title }</h1>
 		<span style="float: right;color: red"><a href="/complain?id=${a.id }">举报</a></span>
-		<h6 align="center">${a.user.username } &nbsp;<fm:formatDate value="${a.created }" pattern="yyyy-MM-dd HH:mm:ss"/></h3>
-		${a.content }
+		<h6 align="center">${a.user.username } &nbsp;&nbsp;<fm:formatDate value="${a.created }" pattern="yyyy-MM-dd HH:mm:ss"/></h3>
+		${a.content }<br>
+		<input type="button" onclick="shouChang(${a.id})" value="收藏" >
 	</div>
-
-		
+</body>
+<script type="text/javascript">
+	function shouChang(id) {
+		location.href="my/article/shouchang?id="+id;
+	}
+</script>
 </html>
